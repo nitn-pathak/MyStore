@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Select Product Type</title>
+  </head>
+
+  <body>
+
+	<select class="form-control" id="catagory-select">
+  <option>Select catagory</option>
+  </select>
+
+
+	<select class="form-control" id="state-select">
+  <option>Select State</option>
+</select>
+
+
+	<!-- <select class="form-control" id="city-select">
+  <option>Select City</option> -->
+</select>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script>
+		var catagoriesObject = [
+            "Food|100000000",
+            "Clothes|100000001",
+            "Gagets|100000002",
+            "Shoes|100000003"
+          ];
+
+        var stateObject = {
+            '100000000' : [
+                'vegetables|100000005',
+                'fruites|100000037',   
+                'snacks|100000037',           
+            ],
+            '100000001' : [
+                'Men|100000062',   
+                'Women|100000063',            
+            ],
+
+            '100000002' : [
+                'Laptop|100000000',   
+                'mobile|100000000',    
+                'ipad|100000000'        
+            ],
+            '100000003' : [
+                'Men|100000000',
+                'Women|100000000'              
+            ]
+        };
+
+        // var cityObject = {
+        //     '100000005' : [
+        //         'Auckland Central|100,000,014',
+        //         'Avondale|100,000,015'
+        //     ],
+        //     '100000037' : [
+        //         'Great Barrier Island (Aotea Island)|100,000,081'
+        //     ],
+        //     '100000062' : [
+        //         'Aongatete|100,000,006',
+        //         'Athenree Gorge|100,000,011'
+        //     ],
+        //     '100000000' : [
+        //         'Akaroa|100,000,396',
+        //         'Duvauchelle|100,000,476',
+        //         'French Farm|100,000,490'
+        //     // ]
+        // };
+
+		window.onload = function() {
+            console.log(catagoriesObject);
+			createOption("catagory-select", catagoriesObject);			
+		}
+		function createOption(elem, array) {            
+			var sel = document.getElementById(elem);
+			var fragment = document.createDocumentFragment();
+
+			array.forEach(function(array, index) {
+				var opt = document.createElement('option');
+				var item = array.split("|");
+				opt.innerHTML = item[0];
+				opt.value = item[1];
+				fragment.appendChild(opt);
+			});
+
+			sel.appendChild(fragment);
+		}	
+		$('#catagory-select').on('change', function(e) {
+			var value = $(this).val();
+			console.log(stateObject[""+value+""]);
+			$('#state-select').find("option:gt(0)").remove();
+			$('#city-select').find("option:gt(0)").remove();
+            createOption('state-select', stateObject[''+value+'']);
+
+		});
+		$('#state-select').on('change', function(e) {
+			var value = $(this).val();
+            console.log(cityObject[""+value+""]);
+            createOption('city-select', cityObject[''+value+'']);
+
+		});
+	</script>
+  </body>
+</html>

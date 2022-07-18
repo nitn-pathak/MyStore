@@ -1,0 +1,40 @@
+* {
+  background-color: white;
+}
+
+
+
+
+
+
+.main{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+    }
+
+
+    .right{
+        height: 60vh;
+        width: 20vw;
+       
+        box-shadow: 2rem;
+        background-color: lightgrey;
+        border-radius: 5rem;
+       margin-left:4rem;
+          }
+
+
+      
+
+                    .right>img{
+                        border-radius: 0rem;
+                             }    
+
+
+    .left{
+       height: 60vh;
+       width: 50vw;
+     
+       
+         }

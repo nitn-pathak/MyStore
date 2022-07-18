@@ -1,0 +1,134 @@
+body{
+    background-color: white;
+/* background-color: rgb(245, 246, 246); */
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+
+}
+
+.mainlogo{
+    margin-left: 1rem;
+      height:11.7rem;
+      width:12.4rem;
+     margin-bottom: 6rem;
+      box-sizing: border-box;
+    /* background-color: chartreuse; */
+      } 
+
+     
+
+
+  header{
+    /* background-color:aqua; */
+    height: 9rem;
+    width: 80rem;
+    display: flex;
+    justify-content: space-between;
+    }
+
+  nav>ul{
+      font-size: x-large;
+       /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  */
+       
+
+      font-weight: bold;
+      margin-top: 4.1rem;
+      /* background: crimson; */
+       }
+
+       .login{
+        margin-left: 33.5rem;
+        font-weight: bold;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+         
+        
+           }
+
+
+         .login select{
+            height:2.1rem;
+            width: 18.5rem;
+            margin-bottom: .7rem;
+            outline: none;
+                }
+
+
+                .login .selectimg{
+                    height:2.1rem;
+                    width: 18.5rem;
+                    margin-bottom: .7rem;
+                    outline: none;
+                    background-color: black;
+                            }
+            
+
+           .textbox{
+              height:1.8rem;
+              width: 18rem;
+              margin-bottom: .7rem;
+              outline: none;
+             
+                }
+
+          .joinbutton{
+            height:2.1rem;
+            width: 18.5rem;
+            background-color: black;
+            font-size:small;
+            color: white;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            }
+
+            li{
+             
+         
+           list-style: none;
+           font-weight:lighter;
+           color: gray;
+          font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+              
+            }
+
+ .footer{
+   
+   margin-top:3rem ;
+   height: 20rem;
+    width: 83rem;
+  
+    background-color: black;
+     
+     color: white; 
+      display:flex;
+        
+     }
+
+     .footer>.left{
+       margin-left:2rem;
+       height: 20rem;
+        width: 38rem;
+
+    
+          }
+
+          .footer>.left h5{
+        font-weight: lighter;
+        
+         
+               }
+     
+              
+     .footer>.right{
+       height: 20rem;
+       width: 38rem;
+            }
+
+            .right>img{
+                margin-top: 2.5rem;
+                height: 1.8rem;
+                width: 1.8rem;
+            margin-right: 1rem;
+                
+                 }
+     
+     
+      
+ 

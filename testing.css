@@ -1,0 +1,41 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content a:hover {
+    
+    background-color: #ddd;
+  
+            }
+
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 20rem;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    
+  }
+
+  /* Change color of dropdown links on hover */
+/* .dropdown-content a:hover {background-color: #ddd;
+} */
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown>.dropbtn:hover{
+text-decoration: underline;
+
+    }
+/* Change the background color of the dropdown button when the dropdown content is shown */
